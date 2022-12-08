@@ -16,18 +16,18 @@ Our team consists of the following members, listed in the table below (the team 
 
 <!-- change the info below to be the real case -->
 
-| Student ID | Student Name | GitHub Account (in Email) |
-| ---------- | ------------ | ------------------------- |
-| 119010351  | 谢昊轩 Haoxuan Xie 🚩      | 119010351@link.cuhk.edu.cn        |
-| 119010020  | 陈梦洁 Mengjie Chen        | 119010020@link.cuhk.edu.cn        |
-| 121090434  | 潘婕 Jie Pan          | 121090434@link.cuhk.edu.cn        |
-| 120090302  | 苏梦琦 Mengqi Su        | 120090302@link.cuhk.edu.cn        |
-| 120090005  | 钟文柯 Wenke Zhong        | 120090005@link.cuhk.edu.cn        |
-| 120090527  | 林锦睿 Jinrui Lin        | 120090527@link.cuhk.edu.cn        |
-| 119010224  | 罗杨知心 Yangzhixin Luo      | rep_laureline@hotmail.com        |
-| 119020226  | 蒋舒亭 Shuting Jiang        | 119020226@link.cuhk.edu.cn        |
-| 120090466  | 何兴杰 Xingjie He        | 120090466@link.cuhk.edu.cn        |
-| 120090454  | 仝研 Yan Tong          | yantong1775@gmail.com       |
+| Student ID | Student Name | GitHub Account (in Email) | GitHub User Name |
+| ---------- | ------------ | ------------------------- | ---------------- |
+| 119010351  | 谢昊轩 Haoxuan Xie 🚩      | 119010351@link.cuhk.edu.cn        | |
+| 119010020  | 陈梦洁 Mengjie Chen        | 119010020@link.cuhk.edu.cn        | |
+| 121090434  | 潘婕 Jie Pan          | 121090434@link.cuhk.edu.cn        | |
+| 120090302  | 苏梦琦 Mengqi Su        | 120090302@link.cuhk.edu.cn        | |
+| 120090005  | 钟文柯 Wenke Zhong        | 120090005@link.cuhk.edu.cn        | |
+| 120090527  | 林锦睿 Jinrui Lin        | 120090527@link.cuhk.edu.cn        | |
+| 119010224  | 罗杨知心 Yangzhixin Luo      | rep_laureline@hotmail.com        | |
+| 119020226  | 蒋舒亭 Shuting Jiang        | 119020226@link.cuhk.edu.cn        | |
+| 120090466  | 何兴杰 Xingjie He        | 120090466@link.cuhk.edu.cn        | |
+| 120090454  | 仝研 Yan Tong          | yantong1775@gmail.com       | @yantong1775 |
 
 ## Project Specification
 
