@@ -27,7 +27,7 @@ Our team consists of the following members, listed in the table below (the team 
 | 119010224  | 罗杨知心 Yangzhixin Luo      | rep_laureline@hotmail.com        | @[lyzx2001](https://github.com/lyzx2001) |
 | 119020226  | 蒋舒亭 Shuting Jiang        | 119020226@link.cuhk.edu.cn        | |
 | 120090466  | 何兴杰 Xingjie He        | 120090466@link.cuhk.edu.cn        | |
-| 120090454  | 仝研 Yan Tong          | yantong1775@gmail.com       | @yantong1775 |
+| 120090454  | 仝研 Yan Tong          | yantong1775@gmail.com       | @[yantong1775](https://github.com/yantong1775) |
 
 ## Project Specification
 
