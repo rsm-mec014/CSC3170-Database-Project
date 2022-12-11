@@ -3,47 +3,47 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 
-# made up data
+CIPY_PATH = "web\data\plant_pos.csv"
 
-chip_type = ["", "X1", "X2", "X3", "X4"]
+MACHINE_PATH = "source\data_generation\dataset\machine_type.xlsx"
 
-chip_version = {
-    "" : [""],
-    "X1" : ["", "x1_1", "x1_2", "x1_3", "x1_4"], 
-    "X2" : ["", "x2_1", "x2_2", "x2_3", "x2_4"],
-    "X3" : ["", "x3_1", "x3_2", "x3_3", "x3_4"], 
-    "X4" : ["", "x4_1", "x4_2", "x4_3", "x4_4"]
-}
+PLANT_PATH = "source\data_generation\dataset\plants.csv"
 
-
-chip_data = {
-    "chip_name" : ["X1", "X1", "X1", "X1", "X2", "X2", "X2", "X2", "X3", "X3", "X3", "X3", "X4", "X4", "X4", "X4"],
-    "chip_version" : ["x1_1", "x1_2", "x1_3", "x1_4", "x2_1", "x2_2", "x2_3", "x2_4", "x3_1", "x3_2", "x3_3", "x3_4", "x4_1", "x4_2", "x4_3", "x4_4"], 
-    "bandwidth" : [np.random.randint(1000,2000) for _ in range(16)]
-}
-
-chip_info = pd.DataFrame(chip_data)
-
-operations = ["design-import", "etch", "bond", "drill", "test"]
-chip_operation = {
-    "Arm" : ["design-import", "etch", "bond", "drill", "test"],
-    "Intel" : ["design-import", "drill", "test"],
-    "Nvidia" : ["design-import", "etch", "bond", "drill", "test"]
-    }
-
-DATA_PATH = "web\data\cn.csv"
+CHIP_PATH = "source\data_generation\dataset\chip_type.xlsx"
 
 @st.cache
-def load_data(nrows):
-    df = pd.read_csv(DATA_PATH, nrows=nrows)
+def load_data():
+    df = pd.read_csv(CIPY_PATH)
     return df
 
+def select_chip(chip_info, c_name, c_ver):
+    if c_name == None:
+        chip_list = chip_info
+    else:
+        if c_ver == None:
+            chip_list = chip_info.loc[chip_info['chip_name'] == c_name]
+        else:
+            chip_list = chip_info.loc[(chip_info['chip_name'] == c_name) & (chip_info['chip_version'] == c_ver)]
+    return chip_list
+
+def select_machine(machine_info, m_name, m_ver):
+    if m_name == None:
+        machine_list = machine_info
+    else:
+        if m_ver == None:
+            machine_list = machine_info.loc[machine_info['machine_name'] == m_name]
+        else:
+            machine_list = machine_info.loc[(machine_info['machine_name'] == m_name) & (machine_info['machine_version'] == m_ver)]
+    return machine_list
+
 def main_page():
+
     st.set_page_config(page_title="Main Demo", page_icon="📈")
     st.sidebar.header("Main Demo")
     
-    img = Image.open("web\img\chip_img.jpg")
-    st.image(img)
+    chip_img = Image.open("web\img\chip_img.jpg")
+    st.image(chip_img)
+    
     st.title("\"Title\"")
 
     st.markdown(
@@ -56,14 +56,22 @@ def main_page():
     )
     
     # Load 300 rows of data into the dataframe.
-    data = load_data(300)
+    data = load_data()
     
-    s3, s4 = st.columns((1,2))
+    plant_text_col, plant_img_col = st.columns((1,2))
     
-    s3.header("***Our Plants***")
-    s3.markdown("***Our plants are all over the country. We are able provide you with the most efficient solution!***")
+    plant_text_col.header("***Our Plants***")
+    plant_text_col.markdown("***Our plants are all over the country. We are able provide you with the most efficient solution!***")
     plant_img = Image.open("web\img\plant.jpg")
-    s4.image(plant_img)
+    plant_img_col.image(plant_img)
+    
+    plant_info = pd.read_csv(PLANT_PATH)
+    plant_list = plant_info[['plant_name', 'province', 'street_address']]
+    
+    plant_expander = st.expander("plant informtion")
+    with plant_expander:
+        st.dataframe(plant_list, use_container_width=True)
+
     st.markdown(
         """
         ### ***Are ALL OVER the country***!!
@@ -71,32 +79,92 @@ def main_page():
         """
     )
     st.map(data)
-    s5, s6 = st.columns((2,1))
-    machine_img = Image.open("web\img\machine.jpeg")
-    s5.image(machine_img)
     
-    s6.header("***Our Machines***")
-    s6.markdown("***Customize your chipset with all the machines we provide!***")
-    st.header("***Our Products***")
+    #########################################################################
+    # The following are information about machines, including information about machine name, chip version, etc.
+    
+    machine_img_col, machine_text_col = st.columns((2,1))
+    machine_img = Image.open("web\img\machine.jpeg")
+    machine_img_col.image(machine_img)
+    
+    machine_text_col.header("***Our Machines***")
+    machine_text_col.markdown("***Customize your chipset with all the machines we provide!***")
 
-    s1, s2 = st.columns((1,1))
+    machine_info = pd.read_excel(MACHINE_PATH)
 
-    selected_chip_type = s1.selectbox(
-        'Chip name',
-        chip_type)
+    machine_name_box, select_m_name_checkbox, machine_version_box, select_m_ver_checkbox = st.columns((5,1,5,1))
+    
+    use_m_name_col = select_m_name_checkbox.checkbox(" ")
+    use_m_ver_col = select_m_ver_checkbox.checkbox("  ")
 
-    selected_chip_ver = s2.selectbox(
-        'Chip version',
-        chip_version[selected_chip_type])
-
-    if selected_chip_type == "":
-        st.write(chip_info)
-    else:
-        if selected_chip_ver == "":
-            st.write(chip_info.loc[chip_info['chip_name'] == selected_chip_type])
-        else:
-            st.write(chip_info.loc[(chip_info['chip_name'] == selected_chip_type) & (chip_info['chip_version'] == selected_chip_ver)])
+    if use_m_name_col:
+        if use_m_ver_col:
+            selected_m_type = machine_name_box.selectbox(
+            'machine name',
+            machine_info['machine_name'].unique())
             
+            selected_m_ver = machine_version_box.selectbox(
+            'machine version',
+            machine_info.loc[machine_info['machine_name'] == selected_m_type]['machine_version'])
+            
+        else:
+            selected_m_type = machine_name_box.selectbox(
+            'machine name',
+            machine_info['machine_name'].unique())
+            
+            selected_m_ver = machine_version_box.selectbox(
+            'machine version',
+            [])
+    else:
+        selected_m_type = machine_name_box.selectbox(
+        'machine name',
+        [])
+        selected_m_ver = machine_version_box.selectbox(
+        'machine version',
+        [])
 
+    machine_list = select_machine(machine_info, selected_m_type, selected_m_ver)
+    st.dataframe(machine_list, use_container_width=True)
+    
+    #########################################################################
+    # The following are information about products, including information about chip name, chip version, etc.
+    st.header("***Our Products***")
+    chip_info = pd.read_excel(CHIP_PATH)
+
+    chip_name_box, select_c_name_checkbox, chip_version_box, select_c_ver_checkbox = st.columns((5,1,5,1))
+    
+    use_c_name_col = select_c_name_checkbox.checkbox("   ")
+    use_c_ver_col = select_c_ver_checkbox.checkbox("    ")
+
+    if use_c_name_col:
+        if use_c_ver_col:
+            selected_c_type = chip_name_box.selectbox(
+            'chip name',
+            chip_info['chip_name'].unique())
+            
+            selected_c_ver = chip_version_box.selectbox(
+            'chip version',
+            chip_info.loc[chip_info['chip_name'] == selected_c_type]['chip_version'])
+            
+        else:
+            selected_c_type = chip_name_box.selectbox(
+            'chip name',
+            chip_info['chip_name'].unique())
+            
+            selected_c_ver = chip_version_box.selectbox(
+            'chip version',
+            [])
+    else:
+        selected_c_type = chip_name_box.selectbox(
+        'chip name',
+        [])
+        selected_c_ver = chip_version_box.selectbox(
+        'chip version',
+        [])
+
+    chip_list = select_chip(chip_info, selected_c_type, selected_c_ver)
+    st.dataframe(chip_list, use_container_width=True)
+            
+    # st.write(chip_list)
 if __name__ == "__main__":
     main_page()
