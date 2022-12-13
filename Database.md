@@ -13,6 +13,7 @@
 * `PROVINCE:`Should not be empty. The name of some province.
 * `ROLE:` The idertifier for distinguish customer and plant owner. At most 10 characters.
 * `STREET_ADDRESS:` A string that is no more than 40 characters for street address. Might be empty
+* `PASSWORD:` A string that is no more than 40 characters for password.
 
 
 `package:` This is a table that contains the information of the ordered package by customers.
@@ -123,12 +124,3 @@
 * `DURATION: `An attribute that discribes how long does certain type of machine needs to process certain type of operation. An integer.
 * `PRIMARY KEY:` OPERATION_NAME+MACHINE_NAME+MACHINE_VERSION.
 * `FOREIGN KEY: `OPERATION_NAME references operation_type; MACHINE_NAME and MACHINE_VERSION reference machine_type.
-
-
-`plant_with_machine_type:`This is a relationship table that discribe the relationship between machine_type and operation_type. Different plants have different types of machine which can handle different types of operations.
-
-* `PLANT_ID:` An attribute having the same format as `plant.PLANT_ID.`
-* `MACHINE_NAME:` An attribute having the same format as `machine_type.MACHINE_NAME.`
-* `MACHINE_VERSION:` An attribute having the same format as `machine_type.MACHINE_VERSION.`
-* `PRIMARY KEY:` PLANT_ID+MACHINE_NAME+MACHINE_VERSION.
-* `FOREIGN KEY:` PLANT_ID references plant; MACHINE_NAME and MACHINE_VERSION reference machine_type.
