@@ -1,15 +1,22 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 from PIL import Image
+import mysql.connector
 
-CIPY_PATH = "web\data\plant_pos.csv"
+CIPY_PATH = "data\plant_pos.csv"
 
-MACHINE_PATH = "source\data_generation\dataset\machine_type.xlsx"
+MACHINE_PATH = "source\data_generation\dataset\machine_type.csv"
 
 PLANT_PATH = "source\data_generation\dataset\plants.csv"
 
-CHIP_PATH = "source\data_generation\dataset\chip_type.xlsx"
+CHIP_PATH = "source\data_generation\dataset\chip_type.csv"
+
+cnx = mysql.connector.connect(
+host="123.60.157.95",
+port=3306,
+user="root",
+password="csc123456@",
+database="project")
 
 @st.cache
 def load_data():
@@ -36,15 +43,20 @@ def select_machine(machine_info, m_name, m_ver):
             machine_list = machine_info.loc[(machine_info['machine_name'] == m_name) & (machine_info['machine_version'] == m_ver)]
     return machine_list
 
-def main_page():
-
-    st.set_page_config(page_title="Main Demo", page_icon="📈")
-    st.sidebar.header("Main Demo")
+def run_query(query, cnx):
+    with cnx.cursor() as cur:
+        cur.execute(query)
+        return cur.fetchall()
     
-    chip_img = Image.open("web\img\chip_img.jpg")
+def preview_page():
+
+    # st.set_page_config(page_title="Main Demo", page_icon="📈")
+    # st.sidebar.header("Main Demo")
+    
+    chip_img = Image.open("images\chip_img.jpg")
     st.image(chip_img)
     
-    st.title("\"Title\"")
+    st.title("Introduction")
 
     st.markdown(
         """
@@ -55,6 +67,7 @@ def main_page():
         """
     )
     
+    st.markdown("***")
     # Load 300 rows of data into the dataframe.
     data = load_data()
     
@@ -62,10 +75,12 @@ def main_page():
     
     plant_text_col.header("***Our Plants***")
     plant_text_col.markdown("***Our plants are all over the country. We are able provide you with the most efficient solution!***")
-    plant_img = Image.open("web\img\plant.jpg")
+    plant_img = Image.open("images\plant.jpg")
     plant_img_col.image(plant_img)
     
-    plant_info = pd.read_csv(PLANT_PATH)
+    # plant_info = pd.read_csv(PLANT_PATH)
+    plant_info = pd.DataFrame(run_query('SELECT plant_name, province, street_address from plant;', cnx), 
+                              columns=['plant_name', 'province', 'street_address'],)
     plant_list = plant_info[['plant_name', 'province', 'street_address']]
     
     plant_expander = st.expander("plant informtion")
@@ -79,19 +94,26 @@ def main_page():
         """
     )
     st.map(data)
+
+    st.markdown("***")
+
     
     #########################################################################
     # The following are information about machines, including information about machine name, chip version, etc.
     
     machine_img_col, machine_text_col = st.columns((2,1))
-    machine_img = Image.open("web\img\machine.jpeg")
+    machine_img = Image.open("images\machine.jpeg")
     machine_img_col.image(machine_img)
     
     machine_text_col.header("***Our Machines***")
     machine_text_col.markdown("***Customize your chipset with all the machines we provide!***")
 
-    machine_info = pd.read_excel(MACHINE_PATH)
-
+    # machine_info = pd.read_csv(MACHINE_PATH)
+    machine_info = pd.DataFrame(run_query('SELECT machine_name, machine_version, price from machine_type;', cnx), 
+                                columns=['machine_name', 'machine_version', 'price'])
+    
+    st.write(machine_info)
+    
     machine_name_box, select_m_name_checkbox, machine_version_box, select_m_ver_checkbox = st.columns((5,1,5,1))
     
     use_m_name_col = select_m_name_checkbox.checkbox(" ")
@@ -128,8 +150,11 @@ def main_page():
     
     #########################################################################
     # The following are information about products, including information about chip name, chip version, etc.
+    st.markdown("***")
     st.header("***Our Products***")
-    chip_info = pd.read_excel(CHIP_PATH)
+    # chip_info = pd.read_csv(CHIP_PATH)
+    chip_info = pd.DataFrame(run_query('SELECT chip_name, chip_version from chip_type;', cnx), 
+                                columns=['chip_name', 'chip_version'])
 
     chip_name_box, select_c_name_checkbox, chip_version_box, select_c_ver_checkbox = st.columns((5,1,5,1))
     
@@ -164,7 +189,7 @@ def main_page():
 
     chip_list = select_chip(chip_info, selected_c_type, selected_c_ver)
     st.dataframe(chip_list, use_container_width=True)
-            
+    st.write("***")
     # st.write(chip_list)
 if __name__ == "__main__":
-    main_page()
+    preview_page()
