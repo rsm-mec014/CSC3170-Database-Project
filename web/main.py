@@ -32,7 +32,7 @@ if st.session_state["function"] == "log":
 
 elif st.session_state["function"] == "consumer":
     with st.sidebar:
-        st.image("images\pandas_chip_2.png")
+        st.image(".\images\pandas_chip_2.png")
         selected_c = om("CEND-INTERFACE", 
                         ["Introduction", 
                          "Page1",
