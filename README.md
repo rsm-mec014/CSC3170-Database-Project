@@ -45,7 +45,11 @@ In this project, we intend to build a web-based database for a chip-manufacture 
 To simulate a real company and satisfy its possible business needs, we will create **data visualization dashboard** that enables the operational analysis such as customer profile, order completion rate, and geometrical distribution of deliveries. Moreover, the platform automatically allocates the production tasks to various plants belonging to the company under certain geometric constraints and the **cost-minimization purpose**. According to the real-time data of each machine's availability, orders will be assigned to the nearest plant to the customer that is available to finish the task. The operation costs of each machines will also be taken into consideration when designing the production chain. The system will reinforce its production strategy based on past data and try to provide its users with clear decision supports.
 
 ## Database Creation and Data Generation
-To create database schemas, run the sql file [``source/db.sql``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/source/db.sql).
+To create database schemas, run the sql file [``source/db_table.sql``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/source/db_table.sql).
+
+To insert data into database schemas, run the sql file [``source/db_insert.sql``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/source/db_insert.sql).
+
+To drop all the database schemas, run the sql file [``source/db_clean.sql``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/source/db_clean.sql).
 
 To generate random data in .csv format, run the .ipynb codes in [``source/data_generation``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/tree/main/source/data_generation).
 
