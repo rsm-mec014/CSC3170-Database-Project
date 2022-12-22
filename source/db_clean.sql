@@ -1,3 +1,5 @@
+-- To drop all the database schemas
+
 USE `project`;
 
 DROP TABLE IF EXISTS machine_type_with_operation_type;
