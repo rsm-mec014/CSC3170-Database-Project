@@ -4,52 +4,49 @@
 -- DELETE FROM user;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/user.csv'
+INFILE 'source/data_generation/dataset/user.csv'
 INTO TABLE user 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/package.csv'
+INFILE 'source/data_generation/dataset/package.csv'
 INTO TABLE package 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/state.csv'
+INFILE 'source/data_generation/dataset/state.csv'
 INTO TABLE state 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/machine_type.csv'
+INFILE 'source/data_generation/dataset/machine_type.csv'
 INTO TABLE machine_type 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/plant.csv'
+INFILE 'source/data_generation/dataset/plant.csv'
 INTO TABLE plant 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/machine.csv'
+INFILE 'source/data_generation/dataset/machine.csv'
 INTO TABLE machine 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
--- line changing in \r\n
--- 下次写sql载入csv前，可以拿Hexeditor看看列分隔符和换行符
--- DELETE FROM chip_type;
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/chip_type.csv'
+INFILE 'source/data_generation/dataset/chip_type.csv'
 INTO TABLE chip_type 
 COLUMNS TERMINATED BY ','
 -- LINES TERMINATED BY '\n'
@@ -61,14 +58,14 @@ IGNORE 1 ROWS;
 -- DELETE FROM chip;
 -- 6 warnings --
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/chip.csv'
+INFILE 'source/data_generation/dataset/chip.csv'
 INTO TABLE chip 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/operation_type.csv'
+INFILE 'source/data_generation/dataset/operation_type.csv'
 INTO TABLE operation_type 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
@@ -76,7 +73,7 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/operation.csv'
+INFILE 'source/data_generation/dataset/operation.csv'
 INTO TABLE operation 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
@@ -84,27 +81,27 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/operation_with_machine.csv'
+INFILE 'source/data_generation/dataset/operation_with_machine.csv'
 INTO TABLE operation_with_machine 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 --- START_TIME ATTRIBUTE NOTE GENERATED
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/plant_with_package.csv'
+INFILE 'source/data_generation/dataset/plant_with_package.csv'
 INTO TABLE plant_with_package 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/chip_type_with_operation_type.csv'
+INFILE 'source/data_generation/dataset/chip_type_with_operation_type.csv'
 INTO TABLE chip_type_with_operation_type 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 LOAD DATA LOCAL
-INFILE 'data_generation/dataset/machine_type_with_operation_type.csv'
+INFILE 'source/data_generation/dataset/machine_type_with_operation_type.csv'
 INTO TABLE machine_type_with_operation_type 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
@@ -116,4 +113,4 @@ IGNORE 1 ROWS;
 -- SELECT * FROM `chip_type`;
 -- SELECT * FROM `machine`;
 -- SELECT * FROM chip;
-ALTER TABLE machine_type MODIFY COLUMN machine_version varchar(20);
+-- ALTER TABLE machine_type MODIFY COLUMN machine_version varchar(20);
