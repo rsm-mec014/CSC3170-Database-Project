@@ -16,14 +16,13 @@ INTO TABLE package
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
-
 LOAD DATA LOCAL
 INFILE 'source/data_generation/dataset/state.csv'
 INTO TABLE state 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
-
+SELECT * from state; ----state name not filled
 LOAD DATA LOCAL
 INFILE 'source/data_generation/dataset/machine_type.csv'
 INTO TABLE machine_type 
@@ -49,7 +48,6 @@ LOAD DATA LOCAL
 INFILE 'source/data_generation/dataset/chip_type.csv'
 INTO TABLE chip_type 
 COLUMNS TERMINATED BY ','
--- LINES TERMINATED BY '\n'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
@@ -77,7 +75,6 @@ INFILE 'source/data_generation/dataset/operation.csv'
 INTO TABLE operation 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
--- LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
