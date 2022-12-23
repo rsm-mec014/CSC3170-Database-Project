@@ -1,6 +1,8 @@
-import streamlit as st
-from pagelib.consumer.shopping_cart_page import *
+# import streamlit as st
+# from pagelib.consumer.shopping_cart_page import *
 
 
-#st.image("images\pandas_chip.png")
-#st.button("Here")
+# #st.image("images\pandas_chip.png")
+# #st.button("Here")
+a=['as','sa']
+print(tuple(a))

@@ -12,18 +12,15 @@ password="root",
 database="project",
 auth_plugin = "mysql_native_password")  
 
-
 st.set_page_config(page_title="Sales Profile", page_icon=":bar_chart:", layout="wide")
 
 def get_sidebar():
     cursor=db.cursor()
-    sql = '''SELECT * FROM user natural join package'''
-    cursor.execute(sql)
+    cursor.execute('''SELECT * FROM user natural join package''')
     # Get column names
     column=[col[0] for col in cursor.description]
     # Get data
     data = cursor.fetchall()
-
     # Get df
     df=pd.DataFrame(list(data),columns=column)
 
@@ -33,6 +30,7 @@ def get_sidebar():
         options=df['PROVINCE'].unique(),
         default=df['PROVINCE'].unique()
     )
+    
 
     df_selection = df.query(
         "PROVINCE == @province"
@@ -68,16 +66,19 @@ def get_sidebar():
         st.area_chart(np.random.randn(50,3))
 
     cursor=db.cursor()
-    cursor.execute('''select c.chip_name as ChipName,sum(p.budget) as revenue
-            from user AS u, package AS p, chip AS c
-            where u.user_id=p.user_id and province='Guangdong'
-            group by c.chip_name
-            order by sum(p.budget) desc
-            limit 0,5
-            ''')
+    cursor.execute('''select u.province, c.chip_name as ChipName,sum(p.budget) as revenue
+                    from user AS u natural join package AS p, chip AS c
+                    where p.package_id=c.package_id and province in''' 
+                    +tuple(province)+
+                    '''group by c.chip_name
+                    order by sum(p.budget) desc
+                    ''')
     provincial_data=pd.DataFrame(cursor.fetchall(),columns=[col[0] for col in cursor.description])
-    provincial_data = provincial_data.round({'revenue':2})
-    st.write(provincial_data)
+    provincial_data = provincial_data.query("province == @province").head()
+    # st.write(provincial_data)
+
+    left_column, right_column = st.columns(2)
+    left_column.write(provincial_data)
     # 各类商品销售情况(柱状图)
     # sales_by_product_line = (
     #     df_selection.groupby(by=["商品类型"]).sum()[["总价"]].sort_values(by="总价")
