@@ -1,4 +1,4 @@
--- To drop all the database schemas
+-- To drop all the database tables
 
 USE `project`;
 
