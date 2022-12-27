@@ -1,4 +1,4 @@
-﻿user_id,first_name,last_name,phone_number,countrY_name,province,role,street_address,password
+﻿user_id,first_name,last_name,phone_number,country_name,province,role,street_address,password
 1,Abbie,Ken,508 420-3608,China,Guangdong,consumer,Guangdong Gongzhuling,6VzqqlGiL
 2,Abbott,Leslie,769 044-5994,China,Guangxi,staff,Guangxi Renhuai,eBmQCZ3vw
 3,Abe,Jesse,701 801-2284,Belize,International,consumer,International Belmopan,ZViF6BBdA1k
