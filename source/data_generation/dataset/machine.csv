@@ -1,4 +1,4 @@
-﻿machine_name,machine_version,price,plant_id,machine_id,plant_label,State
+﻿machine_name,machine_version,price,plant_id,machine_id,plant_label,state
 Ablation laser dicing machine for plasma dicing,AL300P,16.8,18,1,Shenzhen-1,Free
 Ablation laser dicing machine for plasma dicing,AL300P,16.8,14,2,Shanghai,Working
 Ablation laser dicing machine for plasma dicing,AL300P,16.8,12,3,Chengdu-1,Free
