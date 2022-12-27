@@ -38,3 +38,17 @@ select u.province, sum(p.budget) as revenue
 from user as u natural join package as p
 GROUP BY u.`PROVINCE`;
 --- 绘制气泡图显示各省销售收入，收入越高气泡越大。最好能显示在地图上。
+
+--- 3. 订单界面
+select `PACKAGE_ID`, user.`USER_ID`, waiting_pkg.deadline, FIRST_NAME, LAST_NAME, phone_number, STREET_ADDRESS 
+from (select * from
+(SELECT * from state where state_name='Waiting') as W natural join package) as waiting_pkg,
+USER
+where waiting_pkg.user_id=user.`USER_ID`;
+--------查询未完成订单的详细信息，可以链接staff页面的订单管理
+
+SELECT `PLANT_ID`, COUNT(*)
+from plant_with_package
+GROUP BY PLANT_ID;
+SELECT plant_id, count(*) as machine_num
+from machine GROUP BY `PLANT_ID`;
