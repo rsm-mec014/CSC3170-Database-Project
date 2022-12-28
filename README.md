@@ -42,6 +42,9 @@ After thorough discussion, our team made the choice and the specification inform
 ## ER Diagram
 ![ER Diagram](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/ER%20diagram.png)
 
+## Video Link
+https://clipchamp.com/watch/9wZpLeW58tA
+
 ## Project Abstract
 In this project, we intend to build a web-based database for a chip-manufacture company that synthesizes various functions of an online order management platform. The platform allows the registration from both customers and employees, where customers can release order and the employees are able to manage the order under the assistance of the information gathered by the database. Payments can also be finished on the platform as it allows **high concurrency payment** and clash recovery. All transaction records will be stored in the online database for analytical needs.
 
