@@ -67,7 +67,6 @@ INFILE 'source/data_generation/dataset/operation_type.csv'
 INTO TABLE operation_type 
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
--- LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL
