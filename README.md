@@ -39,6 +39,9 @@ After thorough discussion, our team made the choice and the specification inform
 - Our branch choice is: **Branch 1, 2**
 - The difficulty level is: **Enhanced**
 
+## Report
+For the whole report, please refer to 
+
 ## ER Diagram
 ![ER Diagram](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/ER%20diagram.png)
 
