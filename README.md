@@ -59,7 +59,8 @@ streamlit run main.py
 ```
 
 ## Video Link
-https://clipchamp.com/watch/9wZpLeW58tA
+[Presentation Video in Clipchamp](https://clipchamp.com/watch/9wZpLeW58tA)
+If the video is vague, please see our Bilibili backup [CSC3170 Final Pre](https://www.bilibili.com/video/BV1pP4y1q7AW/?spm_id_from=333.337.search-card.all.click&vd_source=910ecdca8e556f0b929ec8687e2cfccb)
 
 ## Project Abstract
 In this project, we intend to build a web-based database for a chip-manufacture company that synthesizes various functions of an online order management platform. The platform allows the registration from both customers and employees, where customers can release order and the employees are able to manage the order under the assistance of the information gathered by the database. Payments can also be finished on the platform as it allows **high concurrency payment** and clash recovery. All transaction records will be stored in the online database for analytical needs.
