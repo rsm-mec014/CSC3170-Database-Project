@@ -71,9 +71,16 @@ streamlit run main.py
 If the video is vague, please see our Bilibili backup [CSC3170 Final Pre](https://www.bilibili.com/video/BV1pP4y1q7AW/?spm_id_from=333.337.search-card.all.click&vd_source=910ecdca8e556f0b929ec8687e2cfccb)
 
 ## Project Abstract
-In this project, we intend to build a web-based database for a chip-manufacture company that synthesizes various functions of an online order management platform. The platform allows the registration from both customers and employees, where customers can release order and the employees are able to manage the order under the assistance of the information gathered by the database. Payments can also be finished on the platform as it allows **high concurrency payment** and clash recovery. All transaction records will be stored in the online database for analytical needs.
+Our project aims at developing a web platform based on a consumer database for the {\bf Chipanda Semiconductor Manufacturing Company}. This platform allows customers to place orders, as well as enables staff to manage those orders. The platform is designed with  in mind, allowing it to easily accommodate future growth and changes in customer needs. In addition, the system has been designed with usability in mind so that customers can quickly and easily place their orders without any confusion or frustration. Finally, the system provides detailed reporting capabilities for both staff and consumers, which will allow them greater insight into order trends over time.
 
-To simulate a real company and satisfy its possible business needs, we will create **data visualization dashboard** that enables the operational analysis such as customer profile, order completion rate, and geometrical distribution of deliveries. Moreover, the platform automatically allocates the production tasks to various plants belonging to the company under certain geometric constraints and the **cost-minimization purpose**. According to the real-time data of each machine's availability, orders will be assigned to the nearest plant to the customer that is available to finish the task. The operation costs of each machines will also be taken into consideration when designing the production chain. The system will reinforce its production strategy based on past data and try to provide its users with clear decision supports.
+The target users of our platform are chip-manufacture corporations that need a secure, efficient, and easy-to-use system to manage customer orders. Our platform provides several advantages over traditional methods, such as:
+- Increased concurrency measures to guarantee the successful payment during transmission and storage, providing scalability to accommodate future growth in demand;
+
+- Detailed reporting capability provides greater insight into order trends;
+
+- The system is designed with availability and transaction costs in mind, so plant managers can place orders in the most convenient and cost-effective manner.
+
+By providing these features and benefits, we believe our platform will offer the best possible experience to both staff and customers alike.
 
 ## Database Creation and Data Generation
 To create database schemas, run the sql file [``source/db_table.sql``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/source/db_table.sql).
