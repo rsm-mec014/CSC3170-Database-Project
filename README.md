@@ -82,4 +82,4 @@ The detailed information of database schemas is included in [``Database.md``](ht
 ## Remarks
 Note that the Huawei cloud database RDS for MySQL that we rendered for our back end was paid to be available before Jan 11, 2023, thus after this date our web application may have some functions that do not work as expected.
 
-If you encounter issues related to it, please do not hesitate to contact us (the email links shown in Team Members section), and we will extend the service life of our Huawei cloud database.
+If you encounter issues related to it, please do not hesitate to contact us (the email links shown in Team Members section), and we will extend the service life of our Huawei cloud database RDS.
