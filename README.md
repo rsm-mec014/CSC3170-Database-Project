@@ -40,7 +40,7 @@ After thorough discussion, our team made the choice and the specification inform
 - The difficulty level is: **Enhanced**
 
 ## Report
-For the whole report, please refer to 
+For the complete report, please refer to [``CSC3170_Project_Report``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/CSC3170_Project_Report.pdf).
 
 ## ER Diagram
 ![ER Diagram](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/ER%20diagram.png)
