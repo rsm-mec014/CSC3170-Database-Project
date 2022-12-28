@@ -43,16 +43,16 @@ After thorough discussion, our team made the choice and the specification inform
 ![ER Diagram](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/ER%20diagram.png)
 
 ## Web Application Link
-We have deployed the app on the cloud, the url is attached.
+We have deployed the app on the cloud, the url is attached as follows:
 
 https://chipandas.streamlit.app
 
 If you want to run the app locally, refer to the following section.
 
 ## How To Run the App
-All the web codes are stored in the web file. The app is written with streamlit, a python-based frontend languague. 
+All the web codes are stored in the web directory. The app is written with streamlit, a Python-based frontend language.
 
-To run the app locally, first go to the web file.
+To run the app locally, first go to the web directory:
 ```
 cd web/
 ```
@@ -87,8 +87,6 @@ To generate random data in .csv format, run the .ipynb codes in [``source/data_g
 The detailed information of database schemas is included in [``Database.md``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/Database.md).
 
 ## Remarks
-Note that the Huawei cloud database RDS for MySQL that we rendered for our back end was paid to be available before Jan 11, 2023, thus after this date our web application may have some functions that do not work as expected.
+Note that the Huawei cloud database RDS for MySQL that we rendered for our back end was paid to be available before Jan 11, 2023, thus after this date our web application may have some functions that do not work as expected. If you encounter issues related to it, please contact rep_laureline@hotmail.com, and we will extend the service lifespan of our Huawei cloud database RDS.
 
 There is a similar issue with the cloud of streamlit, where we deploy our app. If the app has not been visited for several weeks, it might sleep temporarily. Contact 120090527@link.cuhk.edu.cn if the app is sleeping.
-
-If you encounter issues related to it, please do not hesitate to contact us (the email links shown in Team Members section), and we will extend the service life of our Huawei cloud database RDS.
