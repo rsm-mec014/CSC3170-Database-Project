@@ -1,8 +1,7 @@
 import streamlit as st
 import mysql.connector
-
+import pandas as pd
 from utils.session_control import *
-
 
 def log_in_based_on_info(role):
     if st.session_state["log_check"] == False:
@@ -17,40 +16,50 @@ def log_in_based_on_info(role):
     
 def log_in_page():
     cnx = mysql.connector.connect(
-    host="123.60.157.95",
-    port=3306,
-    user="root",
-    password="csc123456@",
-    database="project") 
+        host="123.60.157.95",
+        port=3306,
+        user="root",
+        password="csc123456@",
+        database="project") 
     first_name = st.text_input("First name",placeholder="Yangsheng")
     last_name = st.text_input("Last name",placeholder="Xu")
     password = st.text_input("Password",placeholder="1999GJ5")
+
     # Get a cursor
     cur = cnx.cursor()
     # Execute a query
     cur.execute("""
-                SELECT ROLE  
-                FROM user_
+                SELECT ROLE, USER_ID  
+                FROM user
                 WHERE (FIRST_NAME = %s)
                 AND (LAST_NAME = %s)
                 AND (PASSWORD = %s);
                 """, (first_name,last_name,password))
-    role = "staff"
-    if len(cur.fetchall()) == 0:
-        st.session_state["log_check"] = False
-    elif len(cur.fetchall()) != 0:
-        st.session_state["log_check"] = True
-        role = cur.fetchone()
-        st.write(len(cur.fetchall()))
+    result = cur.fetchone()
+    if result:
+        role, ID= result
+    elif result == None:
+        role = result
+
     # Fetch one result
     if st.button("Log In"):
-        if st.session_state["log_check"] == False:
+        if role == None:
             st.warning("INVALID INFORMATION! RECHECK YOUR INPUT!")
-        else:
-            st.session_state["log_check"] == True
-            move_to_consumer_state()
-            st.success("Log in Seccessfully")
+        elif role == "staff":
+            move_to_staff_state()
+            if "ID" not in st.session_state: 
+                st.session_state["ID"] = 0
+            st.session_state["ID"] = ID
+            st.success("Log in Seccessfully as staff. Please click the button again.")
             st.balloons()
+        elif role == "consumer":
+            move_to_consumer_state()
+            if "ID" not in st.session_state: 
+                st.session_state["ID"] = 0
+            st.session_state["ID"] = ID
+            st.success("Log in Seccessfully as consumer. Please click the button again.")
+            st.balloons()
+    cnx.close()
 
 def sign_up_page():
     cnx = mysql.connector.connect(
@@ -83,10 +92,11 @@ def sign_up_page():
 
     if st.button("Sign Up"):
         query = """
-        INSERT INTO user_ (FIRST_NAME, LAST_NAME, PHONE_NUMBER, COUNTRY_NAME, PROVINCE, ROLE, STREET_ADDRESS, PASSWORD)
+        INSERT INTO user (FIRST_NAME, LAST_NAME, PHONE_NUMBER, COUNTRY_NAME, PROVINCE, ROLE, STREET_ADDRESS, PASSWORD)
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
         """
         cur.execute(query, (first_name, last_name, phone_number, country_name, province, role, street_address, password))
         cnx.commit()
         st.success("Sign Up Seccessfully")
         st.snow()
+    cnx.close()
