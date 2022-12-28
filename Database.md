@@ -98,9 +98,15 @@
 * `MACHINE_ID: `An attribute having the same format as `machine.MACHINE_ID.`
 * `START_TIME: `An attribute that discribes when the machine starts to process the operation. A datetime data type.
 * `END_TIME: `An attribute that discribes when the machine finishes the operation. A datetime data type.
+* `PRIMARY KEY: ` OPERATION_ID + CHIP_ID
+* `FOREIGN KEY`:  OPERATION_ID references operation; CHIP_ID references chip.
+
+`operation_with_chip:` This is a relatinship table that discribes the relationship between operation and chip.
+
+* `OPERATION_ID: ` An attribute having the same format as `operation.OPERATION_ID.`
+* `CHIP_ID: `An attribute having the same format as `chip.CHIP_ID.`
 * `PRIMARY KEY: ` OPERATION_ID + MACHINE_ID
 * `FOREIGN KEY`:  OPERATION_ID references operation; MACHINE_ID references machine.
-
 
 `plant_with_package:` This is a relationship table that discribe the relationship between plant and package.
 
