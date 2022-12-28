@@ -43,9 +43,22 @@ After thorough discussion, our team made the choice and the specification inform
 ![ER Diagram](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/ER%20diagram.png)
 
 ## Web Application Link
+<<<<<<< HEAD
 https://chipandas.streamlit.app
 
 ## How To Run
+=======
+We have deployed the app on the cloud, the url is attached.
+
+https://chipandas.streamlit.app
+
+If you want to run the app locally, refer to the following section.
+
+## How To Run the App
+All the web codes are stored in the web file. The app is written with streamlit, a python-based frontend languague. 
+
+To run the app locally, first go to the web file.
+>>>>>>> 7f0a9e7a6987d378f18852126de40c0c5e51f7b1
 ```
 cd web/
 ```
@@ -82,4 +95,9 @@ The detailed information of database schemas is included in [``Database.md``](ht
 ## Remarks
 Note that the Huawei cloud database RDS for MySQL that we rendered for our back end was paid to be available before Jan 11, 2023, thus after this date our web application may have some functions that do not work as expected.
 
+<<<<<<< HEAD
+=======
+There is a similar issue with the cloud of streamlit, where we deploy our app. If the app has not been visited for several weeks, it might sleep temporarily. Contact 120090527@link.cuhk.edu.cn if the app is sleeping.
+
+>>>>>>> 7f0a9e7a6987d378f18852126de40c0c5e51f7b1
 If you encounter issues related to it, please do not hesitate to contact us (the email links shown in Team Members section), and we will extend the service life of our Huawei cloud database RDS.
