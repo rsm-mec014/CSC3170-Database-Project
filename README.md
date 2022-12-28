@@ -45,7 +45,9 @@ After thorough discussion, our team made the choice and the specification inform
 ## Web Application Link
 https://chipandas.streamlit.app
 
-## How To Run
+## How To Run the App
+All the web codes are stored in the web file. The app is written with streamlit, a python-based frontend languague. 
+First go to the web file.
 ```
 cd web/
 ```
