@@ -43,7 +43,11 @@ After thorough discussion, our team made the choice and the specification inform
 ![ER Diagram](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/ER%20diagram.png)
 
 ## Web Application Link
+We have deployed the app on the cloud, the url is attached.
+
 https://chipandas.streamlit.app
+
+If you want to run the app locally, refer to the following section.
 
 ## How To Run the App
 All the web codes are stored in the web file. The app is written with streamlit, a python-based frontend languague. 
