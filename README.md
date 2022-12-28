@@ -42,6 +42,22 @@ After thorough discussion, our team made the choice and the specification inform
 ## ER Diagram
 ![ER Diagram](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/ER%20diagram.png)
 
+## Web Application Link
+https://chipandas.streamlit.app
+
+## How To Run
+```
+cd web/
+```
+To set up the environment:
+```
+pip install -r requirements.txt
+```
+To execute the code:
+```
+streamlit run main.py
+```
+
 ## Video Link
 https://clipchamp.com/watch/9wZpLeW58tA
 
