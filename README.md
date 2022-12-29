@@ -73,6 +73,8 @@ streamlit run main.py
 
 If the video is vague, please see our Bilibili backup [CSC3170 Final Pre](https://www.bilibili.com/video/BV1pP4y1q7AW/?spm_id_from=333.337.search-card.all.click&vd_source=910ecdca8e556f0b929ec8687e2cfccb)
 
+Please notice that our report [``CSC3170_Project_Report.pdf``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/CSC3170_Project_Report.pdf) contains a more thorough explanation and covers more main functions of our project in detail.
+
 ## Project Abstract
 Our project aims at developing a web platform based on a consumer database for the {\bf Chipanda Semiconductor Manufacturing Company}. This platform allows customers to place orders, as well as enables staff to manage those orders. The platform is designed with  in mind, allowing it to easily accommodate future growth and changes in customer needs. In addition, the system has been designed with usability in mind so that customers can quickly and easily place their orders without any confusion or frustration. Finally, the system provides detailed reporting capabilities for both staff and consumers, which will allow them greater insight into order trends over time.
 
