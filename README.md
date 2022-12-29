@@ -96,7 +96,7 @@ To drop all the database schemas, run the sql file [``source/db_clean.sql``](htt
 
 To generate random data in .csv format, run the .ipynb codes in [``source/data_generation``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/tree/main/source/data_generation).
 
-The detailed information of database schemas is included in [``Database.md``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/Database.md).
+The detailed information of database schemas is included in [``database_intro.md``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/database_intro.md).
 
 ## Remarks
 Note that the Huawei cloud database RDS for MySQL that we rendered for our back end was paid to be available before Jan 11, 2023, thus after this date our web application may have some database-related functions that do not work as expected. If you encounter issues related to it, please contact rep_laureline@hotmail.com, and we will extend the service lifespan of our Huawei cloud database RDS.
