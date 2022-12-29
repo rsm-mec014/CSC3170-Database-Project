@@ -69,9 +69,9 @@ streamlit run main.py
 ```
 
 ## Video Link
-[Presentation Video in Clipchamp](https://clipchamp.com/watch/9wZpLeW58tA)
+[Presentation_Video_in_Clipchamp](https://clipchamp.com/watch/9wZpLeW58tA)
 
-If the video is vague, please see our Bilibili backup [CSC3170 Final Pre](https://www.bilibili.com/video/BV1pP4y1q7AW/?spm_id_from=333.337.search-card.all.click&vd_source=910ecdca8e556f0b929ec8687e2cfccb)
+If the video is vague, please see our Bilibili backup [CSC3170_Final_Pre](https://www.bilibili.com/video/BV1pP4y1q7AW/?spm_id_from=333.337.search-card.all.click&vd_source=910ecdca8e556f0b929ec8687e2cfccb)
 
 Please notice that our report [``CSC3170_Project_Report.pdf``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/CSC3170_Project_Report.pdf) contains a more thorough explanation and covers more main functions of our project in detail.
 
