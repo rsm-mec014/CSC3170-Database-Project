@@ -40,10 +40,10 @@ After thorough discussion, our team made the choice and the specification inform
 - The difficulty level is: **Enhanced**
 
 ## Report
-For the complete report, please refer to [``CSC3170_Project_Report.pdf``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/CSC3170_Project_Report.pdf).
+For the complete report, please refer to [``CSC3170_Project_Report.pdf``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/CSC3170_Project_Report.pdf).
 
 ## ER Diagram
-![ER Diagram](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/ER%20diagram.png)
+![ER Diagram](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/ER_diagram.png)
 
 ## Web Application Link
 We have deployed the app on the cloud, the url is attached as follows:
@@ -73,7 +73,7 @@ streamlit run main.py
 
 If the video is vague, please see our Bilibili backup [CSC3170 Final Pre](https://www.bilibili.com/video/BV1pP4y1q7AW/?spm_id_from=333.337.search-card.all.click&vd_source=910ecdca8e556f0b929ec8687e2cfccb)
 
-Please notice that our report [``CSC3170_Project_Report.pdf``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/CSC3170_Project_Report.pdf) contains a more thorough explanation and covers more main functions of our project in detail.
+Please notice that our report [``CSC3170_Project_Report.pdf``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/CSC3170_Project_Report.pdf) contains a more thorough explanation and covers more main functions of our project in detail.
 
 ## Project Abstract
 Our project aims at developing a web platform based on a consumer database for the {\bf Chipanda Semiconductor Manufacturing Company}. This platform allows customers to place orders, as well as enables staff to manage those orders. The platform is designed with  in mind, allowing it to easily accommodate future growth and changes in customer needs. In addition, the system has been designed with usability in mind so that customers can quickly and easily place their orders without any confusion or frustration. Finally, the system provides detailed reporting capabilities for both staff and consumers, which will allow them greater insight into order trends over time.
@@ -88,15 +88,15 @@ The target users of our platform are chip-manufacture corporations that need a s
 By providing these features and benefits, we believe our platform will offer the best possible experience to both staff and customers alike.
 
 ## Database Creation and Data Generation
-To create database schemas, run the sql file [``source/db_table.sql``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/source/db_table.sql).
+To create database schemas, run the sql file [``source/db_table.sql``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/source/db_table.sql).
 
-To insert data into database schemas, run the sql file [``source/db_insert.sql``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/source/db_insert.sql).
+To insert data into database schemas, run the sql file [``source/db_insert.sql``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/source/db_insert.sql).
 
-To drop all the database schemas, run the sql file [``source/db_clean.sql``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/source/db_clean.sql).
+To drop all the database schemas, run the sql file [``source/db_clean.sql``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/source/db_clean.sql).
 
-To generate random data in .csv format, run the .ipynb codes in [``source/data_generation``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/tree/main/source/data_generation).
+To generate random data in .csv format, run the .ipynb codes in [``source/data_generation``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/tree/main/source/data_generation).
 
-The detailed information of database schemas is included in [``database_intro.md``](https://github.com/CSC3170-2022Fall/project-wiskey-drunkards/blob/main/database_intro.md).
+The detailed information of database schemas is included in [``database_intro.md``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/database_intro.md).
 
 ## Remarks
 Note that the Huawei cloud database RDS for MySQL that we rendered for our back end was paid to be available before Jan 11, 2023, thus after this date our web application may have some database-related functions that do not work as expected. If you encounter issues related to it, please contact rep_laureline@hotmail.com, and we will extend the service lifespan of our Huawei cloud database RDS.
