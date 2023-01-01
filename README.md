@@ -69,7 +69,11 @@ streamlit run main.py
 ```
 
 ## Video Link
+Clipchamp:
+
 [Presentation_Video_in_Clipchamp](https://clipchamp.com/watch/9wZpLeW58tA)
+
+Bilibili:
 
 If the video is vague, please see our Bilibili backup [CSC3170_Final_Pre](https://www.bilibili.com/video/BV1pP4y1q7AW/?spm_id_from=333.337.search-card.all.click&vd_source=910ecdca8e556f0b929ec8687e2cfccb)
 
@@ -94,11 +98,11 @@ To insert data into database schemas, run the sql file [``source/db_insert.sql``
 
 To drop all the database schemas, run the sql file [``source/db_clean.sql``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/source/db_clean.sql).
 
-To generate random data in .csv format, run the .ipynb codes in [``source/data_generation``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/tree/main/source/data_generation).
+To generate random data in ``.csv`` format, run the ``.ipynb`` codes in [``source/data_generation``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/tree/main/source/data_generation).
 
 The detailed information of database schemas is included in [``database_intro.md``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/database_intro.md).
 
 ## Remarks
-Note that the Huawei cloud database RDS for MySQL that we rendered for our back end was paid to be available before Jan 11, 2023, thus after this date our web application may have some database-related functions that do not work as expected. If you encounter issues related to it, please contact rep_laureline@hotmail.com, and we will extend the service lifespan of our Huawei cloud database RDS.
+Note that the Huawei cloud database RDS for MySQL that we rendered for our back end was paid to be available before Jan 10, 2023, thus after this date our web application may have some database-related functions that do not work as expected. If you encounter issues related to it, please contact rep_laureline@hotmail.com, and we will extend the service lifespan of our Huawei cloud database RDS.
 
 There is a similar issue with the cloud of streamlit, where we deploy our app. If the app has not been visited for several weeks, it might sleep temporarily. Contact 120090527@link.cuhk.edu.cn if the app is sleeping.
