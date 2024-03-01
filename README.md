@@ -1,14 +1,18 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9434978&assignment_repo_type=AssignmentRepo)
-# CSC3170 Course Project
+# Web-based Database Dashboard
 
 ## Project Overall Description
 
-This is our implementation for the course project of CSC3170, 2022 Fall, CUHK(SZ). For details of the project, you can refer to [project-description.md](project-description.md). In this project, we will utilize what we learned in the lectures and tutorials in the course, and implement either one of the following major jobs:
+Our project aims at developing a web platform based on a consumer database for the **Chipanda Semiconductor Manufacturing Company**. This platform allows customers to place orders, as well as enables staff to manage those orders. The platform is designed with  in mind, allowing it to easily accommodate future growth and changes in customer needs. In addition, the system has been designed with usability in mind so that customers can quickly and easily place their orders without any confusion or frustration. Finally, the system provides detailed reporting capabilities for both staff and consumers, which will allow them greater insight into order trends over time.
 
-<!-- Please fill in "x" to replace the blank space between "[]" to tick the todo item; it's ticked on the first one by default. -->
+The target users of our platform are chip-manufacture corporations that need a secure, efficient, and easy-to-use system to manage customer orders. Our platform provides several advantages over traditional methods, such as:
+- Increased concurrency measures to guarantee the successful payment during transmission and storage, providing scalability to accommodate future growth in demand;
 
-- [x] **Application with Database System(s)**
-- [ ] **Implementation of a Database System**
+- Detailed reporting capability provides greater insight into order trends;
+
+- The system is designed with availability and transaction costs in mind, so plant managers can place orders in the most convenient and cost-effective manner.
+
+By providing these features and benefits, we believe our platform will offer the best possible experience to both staff and customers alike.
 
 ## Team Members
 
@@ -78,18 +82,6 @@ Bilibili:
 If the video is vague, please see our Bilibili backup [CSC3170_Final_Pre](https://www.bilibili.com/video/BV1pP4y1q7AW/?spm_id_from=333.337.search-card.all.click&vd_source=910ecdca8e556f0b929ec8687e2cfccb)
 
 Please notice that our report [``CSC3170_Project_Report.pdf``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/CSC3170_Project_Report.pdf) contains a more thorough explanation and covers more main functions of our project in detail.
-
-## Project Abstract
-Our project aims at developing a web platform based on a consumer database for the **Chipanda Semiconductor Manufacturing Company**. This platform allows customers to place orders, as well as enables staff to manage those orders. The platform is designed with  in mind, allowing it to easily accommodate future growth and changes in customer needs. In addition, the system has been designed with usability in mind so that customers can quickly and easily place their orders without any confusion or frustration. Finally, the system provides detailed reporting capabilities for both staff and consumers, which will allow them greater insight into order trends over time.
-
-The target users of our platform are chip-manufacture corporations that need a secure, efficient, and easy-to-use system to manage customer orders. Our platform provides several advantages over traditional methods, such as:
-- Increased concurrency measures to guarantee the successful payment during transmission and storage, providing scalability to accommodate future growth in demand;
-
-- Detailed reporting capability provides greater insight into order trends;
-
-- The system is designed with availability and transaction costs in mind, so plant managers can place orders in the most convenient and cost-effective manner.
-
-By providing these features and benefits, we believe our platform will offer the best possible experience to both staff and customers alike.
 
 ## Database Creation and Data Generation
 To create database schemas, run the sql file [``source/db_table.sql``](https://github.com/CSC3170-2022Fall/project-whiskey-drunkards/blob/main/source/db_table.sql).
