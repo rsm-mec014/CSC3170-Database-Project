@@ -23,7 +23,7 @@ Our team consists of the following members, listed in the table below (the team 
 | Student ID | Student Name | GitHub Account (in Email) | GitHub User Name |
 | ---------- | ------------ | ------------------------- | ---------------- |
 | 119010351  | 谢昊轩 Haoxuan Xie 🚩      | 119010351@link.cuhk.edu.cn        |@[ForwardStar](https://github.com/ForwardStar) |
-| 119010020  | 陈梦洁 Mengjie Chen        | 119010020@link.cuhk.edu.cn        |@[wuli-mA](https://github.com/wuli-mA) |
+| 119010020  | 陈梦洁 Mengjie Chen        | mec014@ucsd.edu              |@[rsm-mec014](https://github.com/wuli-mA) |
 | 121090434  | 潘婕 Jie Pan          | 121090434@link.cuhk.edu.cn        | @[121090434](https://github.com/121090434)|
 | 120090302  | 苏梦琦 Mengqi Su        | 120090302@link.cuhk.edu.cn        | @[Su-823](http://github.com/Su-823) |
 | 120090005  | 钟文柯 Wenke Zhong        | 120090005@link.cuhk.edu.cn        | @[120090005](https://github.com/120090005)|
